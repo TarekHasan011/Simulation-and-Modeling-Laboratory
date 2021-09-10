@@ -39,7 +39,7 @@ class GameOfLife_GridDraw():
         plt.scatter(whites[:, 0], whites[:, 1], color='white', marker='s', s=12)
         plt.tick_params(left=False, right=False, labelleft=False, labelbottom=False, bottom=False)
         plt.grid(color=self.grid_color)
-        plt.show()
+        plt.show(block=False)
         return
 
 

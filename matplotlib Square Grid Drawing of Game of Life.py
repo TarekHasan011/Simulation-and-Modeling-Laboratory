@@ -35,8 +35,10 @@ class GameOfLife_GridDraw():
         blacks = np.array(blacks)
         whites = np.array(whites)
         plt.get_current_fig_manager().canvas.set_window_title('Game of Life')
-        plt.scatter(blacks[:, 0], blacks[:, 1], color='black', marker='s', s=12)
-        plt.scatter(whites[:, 0], whites[:, 1], color='white', marker='s', s=12)
+        if len(blacks) > 0:
+            plt.scatter(blacks[:, 0], blacks[:, 1], color='black', marker='s', s=12)
+        if len(whites) > 0:
+            plt.scatter(whites[:, 0], whites[:, 1], color='white', marker='s', s=12)
         plt.tick_params(left=False, right=False, labelleft=False, labelbottom=False, bottom=False)
         plt.grid(color=self.grid_color)
         plt.show(block=False)

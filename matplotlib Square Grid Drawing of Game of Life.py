@@ -34,7 +34,7 @@ class GameOfLife_GridDraw():
                             whites.append([tx, ty])
         blacks = np.array(blacks)
         whites = np.array(whites)
-
+        plt.get_current_fig_manager().canvas.set_window_title('Game of Life')
         plt.scatter(blacks[:, 0], blacks[:, 1], color='black', marker='s', s=12)
         plt.scatter(whites[:, 0], whites[:, 1], color='white', marker='s', s=12)
         plt.tick_params(left=False, right=False, labelleft=False, labelbottom=False, bottom=False)
